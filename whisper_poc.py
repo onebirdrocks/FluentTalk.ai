@@ -50,7 +50,6 @@ def audio_to_text_mlx(audio_file):
 def main(audio_file):
     audio_to_text_mlx(audio_file)
     audio_to_text(audio_file)
-    #audio_to_text_coreml(audio_file)
    
 
 if __name__ == "__main__":
