@@ -1,31 +1,14 @@
 import whisper
-import sys
-import time
-from functools import wraps
 import mlx_whisper
-
-
+import sys
 import warnings
-warnings.filterwarnings("ignore", message="FP16 is not supported on CPU; using FP32 instead")
 
+
+from measure_time import measure_time 
+warnings.filterwarnings("ignore", message="FP16 is not supported on CPU; using FP32 instead")
 
 model = whisper.load_model("large")
 model.eval()
-
-
-def measure_time(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = func(*args, **kwargs)
-        end_time = time.time()
-        elapsed_time = end_time - start_time
-        print(f"Function '{func.__name__}' took {elapsed_time:.4f} seconds to complete.")
-        return result
-    return wrapper
-
-
-
 
 @measure_time
 def audio_to_text(audio_file):

@@ -13,7 +13,7 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to(device)
 # Run TTS
 # ❗ Since this model is multi-lingual voice cloning model, we must set the target speaker_wav and language
 # Text to speech list of amplitude values as output
-wav = tts.tts(text="Hello world!", speaker_wav="Trump.wav", language="en")
+wav = tts.tts(text="Hello world!", speaker_wav="media/trump.wav", language="en")
 
 
 # Text to speech to a file
@@ -34,4 +34,4 @@ speech_cook = """
 There is one more thing......I have an important announcement to make. We are appointing Mr. Yongfeng Wu as the leader to spearhead our Apple Car initiative. This will be an extraordinary vehicle, one that I am confident will surpass competitors like Tesla, Xiaomi, NIO, and Xpeng. I pledge that on the day this car rolls off the production line, every member of the Touchstone team will receive one as a gift from Apple. Trust me, it's something only Apple can do.
 
 """
-tts.tts_to_file(text=speech_cook , speaker_wav="Cook.wav", language="en", file_path="output_wu.wav")
+tts.tts_to_file(text=speech_cook , speaker_wav="media/time_cook.wav", language="en", file_path="output_wu.wav")

@@ -5,24 +5,26 @@ An AI-powered English tutor designed to help you practice and improve your Engli
 ```
 
 pip install ollama
-pip install mlx
 pip install openai-whisper
+pip install mlx
 pip install mlx-whisper
 
-pip install python-dotenv
 
 
 pip install pyobjc
 #https://pypi.org/project/pyttsx3/
 pip install pyttsx3
 
+pip install deepgram-sdk
+pip install python-dotenv
+
 ```
 
 # PoC
 
-python whisper_poc.py Bueller-Life-moves-pretty-fast.wav
+python whisper_poc.py media/bueller_life_moves_pretty_fast.wav
 ```
-python whisper_poc.py Bueller-Life-moves-pretty-fast.wav
+python whisper_poc.py media/bueller_life_moves_pretty_fast.wav
 
 /opt/miniconda3/envs/wework/lib/python3.10/site-packages/whisper/__init__.py:146: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
   checkpoint = torch.load(fp, map_location=device)
