@@ -1,5 +1,10 @@
 .DS_Store
 
+/server/venv
+/server/.env
+/client/frontend/node_modules
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

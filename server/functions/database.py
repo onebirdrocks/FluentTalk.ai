@@ -2,14 +2,15 @@ import os
 import json
 import random
 
+local_file="chat_history.json"
 
-local_file="conversation_data.json"
-
+# Save messages for retrieval later on
 def get_recent_messages():
 
+  # Define the file name
   file_name = local_file
   learn_instruction = {"role": "system", 
-                       "content": "You are an English teacher named Katie. The user is named Yiming. Keep your responses under 30 words. If you find any grammatical error in user's messages. Please correct him and make the response less than 150 words."}
+                       "content": "You are an English teacher named Echo. The user is named Yiming. Keep your responses under 30 words. If you find any grammatical error in user's messages. Please correct him and make the response less than 150 words."}
   
   messages = []
 
@@ -22,6 +23,7 @@ def get_recent_messages():
     learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some English word to learn. "
 
   messages.append(learn_instruction)
+
 
   # Get last messages
   try:
@@ -44,13 +46,16 @@ def get_recent_messages():
   return messages
 
 
-# Save messages
+# Save messages for retrieval later on
 def store_messages(request_message, response_message):
 
+  # Define the file name
   file_name = local_file
 
+  # Get recent messages
   messages = get_recent_messages()[1:]
 
+  # Add messages to data
   user_message = {"role": "user", "content": request_message}
   assistant_message = {"role": "assistant", "content": response_message}
   messages.append(user_message)
@@ -63,6 +68,9 @@ def store_messages(request_message, response_message):
 
 # Save messages for retrieval later on
 def reset_messages():
+
+  # Define the file name
   file_name = local_file
+
   # Write an empty file
   open(file_name, "w")
