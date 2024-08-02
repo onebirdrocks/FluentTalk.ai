@@ -18,9 +18,9 @@ def get_recent_messages():
   if x < 0.2:
     learn_instruction["content"] = learn_instruction["content"] + "Your response will have some light humour. "
   elif x < 0.5:
-    learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topocs about GenAI. "
+    learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topocs about GenAI. New technologies, Life styles, and more. "
   else:
-    learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some English word to learn. "
+    learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some English word related to learn (Related to your topics). "
 
   messages.append(learn_instruction)
 

@@ -42,8 +42,8 @@ const Controller = () => {
             audio.src = createBlobURL(blob);
 
             // Append to audio
-            const rachelMessage = { sender: "rachel", blobUrl: audio.src };
-            messagesArr.push(rachelMessage);
+            const echoMessage = { sender: "echo", blobUrl: audio.src };
+            messagesArr.push(echoMessage);
             setMessages(messagesArr);
 
             // Play audio
@@ -71,14 +71,14 @@ const Controller = () => {
                 key={index + audio.sender}
                 className={
                   "flex flex-col " +
-                  (audio.sender == "rachel" && "flex items-end")
+                  (audio.sender == "echo" && "flex items-end")
                 }
               >
                 {/* Sender */}
                 <div className="mt-4 ">
                   <p
                     className={
-                      audio.sender == "rachel"
+                      audio.sender == "echo"
                         ? "text-right mr-2 italic text-green-500"
                         : "ml-2 italic text-blue-500"
                     }
@@ -92,6 +92,7 @@ const Controller = () => {
                     className="appearance-none"
                     controls
                   />
+                  <div></div>
                 </div>
               </div>
             );
@@ -99,7 +100,7 @@ const Controller = () => {
 
           {messages.length == 0 && !isLoading && (
             <div className="text-center font-light italic mt-10">
-              Send your teacher Echo a message...
+              Send your English teacher Echo a message...
             </div>
           )}
 
@@ -111,10 +112,10 @@ const Controller = () => {
         </div>
 
         {/* Recorder */}
-        <div className="fixed bottom-0 w-full py-6 border-t text-center bg-gradient-to-r from-sky-500 to-green-500">
+        <div className="fixed bottom-0 w-full py-4 border-t text-center bg-gradient-to-r from-purple-700 to-cyan-500">
           <div className="flex justify-center items-center w-full">
             <div>
-              <RecordMessage handleStop={handleStop} />
+              <RecordMessage handleStop={handleStop} /> 
             </div>
           </div>
         </div>
