@@ -4,9 +4,8 @@ import random
 
 local_file="chat_history.json"
 
-# Save messages for retrieval later on
+#Save messages for retrieval later on
 def get_recent_messages():
-
   # Define the file name
   file_name = local_file
   learn_instruction = {"role": "system", 
@@ -21,10 +20,8 @@ def get_recent_messages():
     learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topics related to GenAI, new technologies, life styles, and more."
   else:
     learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some related Englishs word to learn (Related to your topics)."
-<<<<<<< HEAD
 
   messages.append(learn_instruction)
-
 
   # Get last messages
   try:
