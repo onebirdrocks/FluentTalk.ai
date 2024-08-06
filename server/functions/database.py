@@ -10,7 +10,7 @@ def get_recent_messages():
   # Define the file name
   file_name = local_file
   learn_instruction = {"role": "system", 
-                       "content": "You are an English teacher named Echo. The user is named Yiming. Keep your responses under 30 words. If you find any grammatical error in user's messages. Please correct him and make the response less than 150 words."}
+                       "content": "You are an English teacher named Echo. The user is named Yiming. Keep your responses under 30 words. If you find any grammatical error in user's messages. Please correct him and make the response less than 30 words."}
   
   messages = []
 
@@ -18,9 +18,9 @@ def get_recent_messages():
   if x < 0.2:
     learn_instruction["content"] = learn_instruction["content"] + "Your response will have some light humour. "
   elif x < 0.5:
-    learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topocs about GenAI. New technologies, Life styles, and more. "
+    learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topics related to GenAI, new technologies, life styles, and more."
   else:
-    learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some English word related to learn (Related to your topics). "
+    learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some related Englishs word to learn (Related to your topics)."
 
   messages.append(learn_instruction)
 
