@@ -21,6 +21,7 @@ def get_recent_messages():
     learn_instruction["content"] = learn_instruction["content"] + "Your response will include some topics related to GenAI, new technologies, life styles, and more."
   else:
     learn_instruction["content"] = learn_instruction["content"] + "Your response will recommend some related Englishs word to learn (Related to your topics)."
+<<<<<<< HEAD
 
   messages.append(learn_instruction)
 
