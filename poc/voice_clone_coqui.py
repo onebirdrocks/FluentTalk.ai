@@ -27,6 +27,14 @@ speech_car = """
 There is one more thing......I have an important announcement to make. We are appointing Mr. Yongfeng Wu as the leader to spearhead our Apple Car initiative. This will be an extraordinary vehicle, one that I am confident will surpass competitors like Tesla, Xiaomi, NIO, and Xpeng. I pledge that on the day this car rolls off the production line, every member of the Touchstone team will receive one as a gift from Apple. Trust me, it's something only Apple can do.
 """
 
+intro_echofluent ="""
+EchoFluent is an experimental and educational Skunkworks project developed during my spare time at WeWork Hangzhou. Initially named FluentTalk.AI, the project's name was inspired by a delightful coincidence during my stay: I was warmly welcomed by a lovely WeWork staff member named Echo, which sparked the idea for EchoFluent.
+
+The project is named after Echo, the Greek goddess known for her ability to echo and repeat others. Just like Echo, language learning thrives on repeated listening and speaking practice, helping you become more fluent over time.
+
+EchoFluent aims to create an AI-powered voice tutor application that offers personalized, interactive, and offline language learning experiences in multiple languages. This initial version is a proof of concept, with continuous improvements and enhancements planned for the future. My goal is to keep EchoFluent simple and efficient while expanding its capabilities.
+"""
+
 ## I hava a dream
 tts.tts_to_file(text=speech_dream , speaker_wav="media/tim_cook.wav", language="en", file_path="output/tim_dream.wav")
 tts.tts_to_file(text=speech_dream , speaker_wav="media/trump.wav", language="en", file_path="output/trump_dream.wav")
@@ -37,3 +45,9 @@ tts.tts_to_file(text=speech_dream , speaker_wav="media/rym.wav", language="en", 
 tts.tts_to_file(text=speech_car , speaker_wav="media/tim_cook.wav", language="en", file_path="output/tim_car.wav")
 tts.tts_to_file(text=speech_car , speaker_wav="media/trump.wav", language="en", file_path="output/trump_car.wav")
 tts.tts_to_file(text=speech_car , speaker_wav="media/rym.wav", language="en", file_path="output/rym_car.wav")
+
+## EchoFluent
+tts.tts_to_file(text=intro_echofluent , speaker_wav="media/tim_cook.wav", language="en", file_path="output/tim_echo.wav")
+tts.tts_to_file(text=intro_echofluent , speaker_wav="media/trump.wav", language="en", file_path="output/trump_echo.wav")
+tts.tts_to_file(text=intro_echofluent , speaker_wav="media/rym.wav", language="en", file_path="output/rym_echo.wav")
+
