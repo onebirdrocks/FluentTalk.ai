@@ -9,7 +9,8 @@ from decouple import config
 
 
 # Custom function imports
-from functions.tts_elevenlabs import convert_text_to_speech
+#from functions.tts_elevenlabs import convert_text_to_speech
+from functions.tts_deepgram import convert_text_to_speech
 from functions.ollama_requests import get_chat_response
 from functions.stt_whisper import convert_audio_to_text
 from functions.database import store_messages, reset_messages

@@ -6,6 +6,25 @@ The project is named after Echo, the Greek goddess known for her ability to echo
 EchoFluent aims to create an AI-powered voice tutor application that offers personalized, interactive, and offline language learning experiences in multiple languages. This initial version is a proof of concept, with continuous improvements and enhancements planned for the future. My goal is to keep EchoFluent simple and efficient while expanding its capabilities.
 
 
+## How to install
+
+
+## How to run
+Start the Service 
+```
+cd service
+
+uvicorn main:app
+
+```
+
+
+Start the frontend
+```
+cd client/frontend
+yarn dev
+```
+
 
 
 
